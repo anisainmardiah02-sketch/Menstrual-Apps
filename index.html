@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kitaran">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#F3E4FF">
+<title>Kitaran Saya</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#3A1F55; --muted:#7D6A94; --on-ink:#FFFFFF;
+  --surface:rgba(255,255,255,.74); --solid:#FFFFFF; --line:rgba(58,31,85,.13);
+  --rose:#F0527F; --rose-ink:#FFFFFF; --lilac:#9B7BFF; --teal:#2DBFAE; --peach:#FFA877; --gold:#FFC857; --gold-ink:#4A3200;
+  --danger:#E5484D; --ok:#17A57B;
+  --shadow:0 14px 30px -16px rgba(58,31,85,.5);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#F6E9FF; --muted:#B7A3D1; --on-ink:#24103D;
+    --surface:rgba(44,24,76,.72); --solid:#2F1A52; --line:rgba(246,233,255,.15);
+    --gold-ink:#3A2700; --danger:#FF7378; --ok:#3EDDB0;
+    --shadow:0 14px 30px -16px rgba(0,0,0,.8);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;color:var(--ink);font-family:'DM Sans',-apple-system,system-ui,sans-serif;font-size:16px;line-height:1.4}
+html{background:#F3E4FF}
+@media (prefers-color-scheme: dark){html{background:#1A0F33}}
+body{min-height:100vh;padding-bottom:130px}
+h1,h2,h3,.rn{font-family:'Fraunces',Georgia,serif;margin:0;letter-spacing:-.01em}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+input,textarea{font:inherit;color:var(--ink)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:520px;margin:0 auto;padding:14px 16px}
+.muted{color:var(--muted)}
+
+/* background */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.bg svg{position:absolute;inset:0;width:100%;height:100%}
+.bg .night{display:none}
+@media (prefers-color-scheme: dark){.bg .day{display:none}.bg .night{display:block}}
+.fl{animation:float 14s ease-in-out infinite alternate}
+.fl2{animation-duration:20s;animation-direction:alternate-reverse}
+@keyframes float{from{transform:translate(-14px,0)}to{transform:translate(22px,-16px)}}
+.tw{animation:twinkle 3.6s ease-in-out infinite}
+.tw:nth-child(2n){animation-delay:1.2s}.tw:nth-child(3n){animation-delay:2.3s}
+@keyframes twinkle{50%{opacity:.2}}
+
+/* top */
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin:6px 2px 14px}
+.ttl h1{font-size:30px;line-height:1.08;font-weight:600}
+.ttl p{margin:5px 0 0;color:var(--muted);font-size:14px;font-weight:500}
+.gear{flex:0 0 44px;height:44px;border-radius:16px;background:var(--surface);border:1px solid var(--line);font-size:19px;box-shadow:0 2px 0 var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* hero ring */
+.hero{background:var(--surface);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:34px;padding:18px 16px 16px;box-shadow:var(--shadow);text-align:center}
+.ring{position:relative;width:236px;height:236px;margin:2px auto 6px}
+.ring svg{width:100%;height:100%;display:block}
+.ring .c{position:absolute;inset:0;display:grid;place-content:center;padding:0 48px}
+.rl{font-size:13px;color:var(--muted);font-weight:600}
+.rn{font-size:40px;font-weight:600;line-height:1.05;margin:2px 0}
+.rn small{font-size:16px;font-weight:600;color:var(--muted)}
+.ro{font-size:13px;color:var(--muted);font-weight:600}
+.phase{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;background:color-mix(in srgb,var(--c) 18%,transparent);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);margin-top:4px}
+.phase i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.phase b{font-weight:700}
+.phase span{color:var(--muted);font-size:13px}
+.ptip{margin:10px 6px 4px;font-size:14.5px}
+.ptip small{display:block;color:var(--muted);margin-top:3px;font-size:13px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin-top:10px;font-size:12.5px;color:var(--muted);font-weight:600}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.legend.big{margin:6px 0 4px}
+.legend .lg{width:16px;height:16px;border-radius:6px}
+.lg.pr{background:var(--rose)}.lg.pd{border:2px dashed var(--rose);background:transparent}.lg.fe{background:color-mix(in srgb,var(--teal) 35%,transparent)}.lg.ov{background:var(--teal)}.lg.td{border:2px solid var(--ink);background:transparent}
+
+/* buttons / cards */
+.row2{display:flex;gap:10px;margin-top:14px}
+.row2 .btn{flex:1}
+.btn{background:var(--ink);color:var(--on-ink);border-radius:18px;padding:13px 16px;font-weight:700;box-shadow:0 3px 0 color-mix(in srgb,var(--ink) 55%,#000)}
+.btn.rose{background:var(--rose);color:var(--rose-ink);box-shadow:0 3px 0 #C23A63}
+.btn.gold{background:var(--gold);color:var(--gold-ink);box-shadow:0 3px 0 #C99A20}
+.btn.ghost{background:var(--solid);border:1.5px solid var(--line);color:var(--ink);box-shadow:0 2px 0 var(--line)}
+.btn.danger{background:var(--solid);border:1.5px solid var(--danger);color:var(--danger);box-shadow:0 2px 0 color-mix(in srgb,var(--danger) 35%,transparent)}
+.btn.sm{padding:8px 13px;font-size:14px;border-radius:14px}
+.btn:active{transform:translateY(2px);box-shadow:none}
+.card{display:block;background:var(--surface);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:28px;padding:16px;margin-top:12px;box-shadow:var(--shadow)}
+.card h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.alertc{display:flex;gap:12px;align-items:center;width:100%;text-align:left;color:inherit;background:color-mix(in srgb,var(--gold) 34%,var(--surface));border-color:color-mix(in srgb,var(--gold) 70%,transparent)}
+.alertc .ai{font-size:30px}
+.alertc b{display:block}
+.alertc span{font-size:13.5px;color:var(--muted)}
+.sec{display:flex;justify-content:space-between;align-items:center;margin:24px 2px 0}
+.sec h2{font-size:21px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:99px;background:color-mix(in srgb,var(--ink) 9%,transparent);white-space:nowrap}
+.pill.good{background:color-mix(in srgb,var(--ok) 24%,transparent)}
+.pill.warn{background:color-mix(in srgb,var(--gold) 45%,transparent)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.mini{background:var(--surface);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;padding:12px 6px;text-align:center;box-shadow:var(--shadow)}
+.mini span{font-size:24px;display:block}
+.mini b{display:block;font-family:'Fraunces',serif;font-size:18px;margin-top:2px}
+.mini small{color:var(--muted);font-size:12px;font-weight:600}
+.empty{background:var(--surface);border:2px dashed var(--line);border-radius:26px;padding:24px 18px;text-align:center;color:var(--muted)}
+
+/* calendar */
+.msw{display:flex;align-items:center;gap:8px;margin:0 0 12px}
+.msw button{height:48px;border-radius:16px;background:var(--surface);border:1px solid var(--line);font-size:24px;font-weight:700;color:var(--ink);box-shadow:0 2px 0 var(--line)}
+.msw>button:first-child,.msw>button:last-child{flex:0 0 52px}
+.msw .mcur{flex:1;font-family:'Fraunces',serif;font-size:19px;font-weight:600}
+.cal{padding:12px 10px;margin-top:0}
+.wd,.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.wd span{text-align:center;font-size:11.5px;font-weight:700;color:var(--muted);padding:4px 0}
+.cd{position:relative;aspect-ratio:1/1;border-radius:14px;display:grid;place-items:center;font-size:15px;font-weight:600;color:var(--ink);border:2px solid transparent}
+.cd.blank{pointer-events:none}
+.cd b{font-weight:600}
+.cd i{position:absolute;bottom:5px;width:5px;height:5px;border-radius:50%;background:var(--lilac)}
+.cd.pr{background:var(--rose);color:#fff}.cd.pr i{background:#fff}
+.cd.sp{background:color-mix(in srgb,var(--rose) 30%,transparent)}
+.cd.pd{border:2px dashed var(--rose)}
+.cd.fe{background:color-mix(in srgb,var(--teal) 28%,transparent)}
+.cd.ov{background:var(--teal);color:#fff}.cd.ov i{background:#fff}
+.cd.td{border-color:var(--ink)}
+
+/* logging */
+.flows{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:1px;padding:9px 2px;border-radius:16px;background:var(--solid);border:2px solid var(--line);font-size:11.5px;font-weight:700}
+.flow span{font-size:13px;line-height:1.5;min-height:22px;white-space:nowrap}
+.flow small{font-size:10px;color:var(--muted);font-weight:600}
+.pains{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.pn{display:flex;flex-direction:column;align-items:center;padding:8px 0;border-radius:16px;background:var(--solid);border:2px solid var(--line);font-size:12px;font-weight:700}
+.pn span{font-size:21px}
+.flow[aria-pressed="true"],.pn[aria-pressed="true"]{border-color:var(--rose);background:color-mix(in srgb,var(--rose) 18%,var(--solid))}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{padding:9px 13px;border-radius:16px;background:var(--solid);border:1.5px solid var(--line);font-size:14.5px;font-weight:600}
+.opt[aria-pressed="true"]{border-color:var(--rose);background:color-mix(in srgb,var(--rose) 18%,var(--solid))}
+.used .ur{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-weight:600;font-size:14.5px}
+.used .ur:last-child{border:0}
+.step{display:inline-flex;align-items:center;gap:6px;background:color-mix(in srgb,var(--ink) 7%,var(--solid));border-radius:99px;padding:3px}
+.step button{width:30px;height:30px;border-radius:50%;background:var(--solid);border:1px solid var(--line);font-size:18px;font-weight:700;line-height:1}
+.step b{min-width:26px;text-align:center;font-weight:800}
+
+/* items */
+.prep{display:flex;gap:12px;align-items:center;background:color-mix(in srgb,var(--lilac) 22%,var(--surface));border:1px solid color-mix(in srgb,var(--lilac) 40%,transparent);border-radius:24px;padding:12px 16px}
+.prep span{font-size:28px}
+.prep b{display:block}
+.prep small{color:var(--muted);font-size:13px}
+.si,.ir{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.si:last-child,.ir:last-child{border:0}
+.ib{display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-align:left}
+.ie{flex:0 0 40px;height:40px;border-radius:14px;background:color-mix(in srgb,var(--lilac) 20%,transparent);display:grid;place-items:center;font-size:21px}
+.sn{flex:1;min-width:0;font-weight:700;font-size:14.5px;line-height:1.25}
+.sn small{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:1px}
+.ix{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.st{font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.st.ok{background:color-mix(in srgb,var(--ok) 24%,transparent)}
+.st.low{background:color-mix(in srgb,var(--rose) 24%,transparent);color:var(--rose)}
+.chk{display:flex;align-items:center;gap:10px;margin:14px 0 4px;font-weight:600;font-size:14.5px}
+.chk input{width:22px;height:22px;accent-color:var(--rose)}
+
+/* insights */
+.chart{width:100%;height:auto;display:block;color:var(--ink)}
+.hr{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--surface);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:20px;padding:12px 14px;margin-top:8px}
+.hd{font-weight:700}
+.hc{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.brow{display:grid;grid-template-columns:150px 1fr auto;gap:10px;align-items:center;margin:9px 0;font-size:14px;font-weight:600}
+.bar{height:9px;background:color-mix(in srgb,var(--ink) 10%,transparent);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--lilac),var(--rose));border-radius:99px}
+.guide ul{margin:0;padding-left:20px}
+.guide li{margin:6px 0;font-size:14.5px}
+.guide.red{border-color:color-mix(in srgb,var(--danger) 55%,transparent)}
+.guide.red h3{color:var(--danger)}
+
+/* tab bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:0 14px calc(12px + env(safe-area-inset-bottom,0px));pointer-events:none;z-index:10}
+.tabs{pointer-events:auto;display:flex;align-items:flex-end;justify-content:space-between;width:100%;max-width:488px;background:rgba(255,255,255,.93);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border:1px solid var(--line);border-radius:30px;padding:8px;box-shadow:0 16px 34px -14px rgba(58,31,85,.55)}
+@media (prefers-color-scheme: dark){.tabs{background:rgba(47,26,82,.94)}}
+.tabs button.t{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0 6px;border-radius:20px;font-size:11px;font-weight:700;color:var(--muted)}
+.tabs button.t svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tabs button.t[aria-selected="true"]{color:var(--ink);background:color-mix(in srgb,var(--rose) 22%,transparent)}
+.tabs .plus{flex:0 0 62px;height:62px;margin:-32px 4px 0;border-radius:50%;background:var(--rose);color:#fff;font-size:34px;line-height:1;border:4px solid var(--solid);box-shadow:0 5px 0 #C23A63,0 16px 22px -10px rgba(240,82,127,.85)}
+.tabs .plus:active{transform:translateY(3px);box-shadow:0 2px 0 #C23A63}
+
+/* sheets */
+.scrim{position:fixed;inset:0;background:rgba(26,10,48,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);display:none;z-index:20}
+.scrim.on{display:block}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;display:flex;justify-content:center;transform:translateY(105%);transition:transform .3s cubic-bezier(.2,.9,.25,1)}
+.sheet.on{transform:none}
+.sheet-in{background:var(--solid);width:100%;max-width:520px;border-radius:32px 32px 0 0;padding:10px 18px calc(26px + env(safe-area-inset-bottom,0px));max-height:92vh;overflow-y:auto;overscroll-behavior:contain;border-top:6px solid var(--rose)}
+.grab{width:44px;height:5px;border-radius:9px;background:var(--line);margin:0 auto 14px}
+.sheet h2{font-size:26px;font-weight:600;margin-bottom:4px}
+.help{color:var(--muted);margin:0 0 12px;font-size:14px}
+h3.sh{font-size:18px;font-weight:600;margin:22px 0 4px}
+label.f{display:block;font-weight:700;font-size:14px;margin:15px 0 7px}
+.inp{width:100%;background:color-mix(in srgb,var(--ink) 6%,var(--solid));border:1.5px solid var(--line);border-radius:16px;padding:13px 15px;font-size:16.5px}
+.inp:focus{border-color:var(--rose);outline:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--rose) 22%,transparent)}
+textarea.inp{min-height:84px;resize:vertical}
+
+.toast{position:fixed;left:50%;top:calc(14px + env(safe-area-inset-top,0px));transform:translate(-50%,-160%);background:var(--ink);color:var(--on-ink);padding:12px 20px;border-radius:99px;font-weight:700;z-index:50;transition:transform .35s cubic-bezier(.2,.9,.25,1);max-width:90%;text-align:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+.toast.on{transform:translate(-50%,0)}
+
+/* lock */
+.lock{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:linear-gradient(160deg,#F7D6F5,#D9C8FF 55%,#FFD9C2);text-align:center;padding:24px}
+@media (prefers-color-scheme: dark){.lock{background:linear-gradient(160deg,#2A1050,#1A0F33 60%,#3A1A4D)}}
+.lock.on{display:flex}
+.lk{width:100%;max-width:320px}
+.lk .moon{font-size:46px}
+.lk h2{font-size:26px;margin:6px 0 4px}
+.lk p{margin:0 0 18px;color:var(--muted);font-weight:600}
+#dots{display:flex;gap:14px;justify-content:center;margin-bottom:22px}
+#dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--ink)}
+#dots i.f{background:var(--ink)}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pad button{height:62px;border-radius:50%;background:var(--surface);border:1px solid var(--line);font-family:'Fraunces',serif;font-size:24px;font-weight:600}
+.pad button:active{background:var(--rose);color:#fff}
+
+#app.enter>*{animation:rise .5s cubic-bezier(.2,.9,.25,1) both}
+#app.enter>*:nth-child(2){animation-delay:.05s}#app.enter>*:nth-child(3){animation-delay:.1s}#app.enter>*:nth-child(4){animation-delay:.15s}#app.enter>*:nth-child(n+5){animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <svg class="day" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E4CCFF"/><stop offset=".5" stop-color="#FFD6E7"/><stop offset="1" stop-color="#FFE7D3"/></linearGradient>
+      <filter id="blur" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="28"/></filter>
+      <mask id="cres"><rect width="400" height="800" fill="#fff"/><circle cx="364" cy="30" r="25" fill="#000"/></mask>
+    </defs>
+    <rect width="400" height="800" fill="url(#dsky)"/>
+    <g filter="url(#blur)" opacity=".85"><circle class="fl" cx="40" cy="170" r="90" fill="#FFB3CF"/><circle class="fl fl2" cx="360" cy="420" r="110" fill="#C9B3FF"/><circle class="fl" cx="90" cy="640" r="100" fill="#FFC9A8"/></g>
+    <circle cx="352" cy="42" r="60" fill="#FFF3C9" opacity=".55" filter="url(#blur)"/>
+    <circle cx="352" cy="42" r="26" fill="#FFF6DD" mask="url(#cres)"/>
+    <g fill="#fff" opacity=".85"><circle cx="60" cy="60" r="2"/><circle cx="170" cy="30" r="1.6"/><circle cx="250" cy="100" r="2"/><circle cx="30" cy="300" r="1.8"/><circle cx="330" cy="250" r="1.6"/><circle cx="210" cy="360" r="2"/><circle cx="370" cy="560" r="1.8"/></g>
+    <g class="fl fl2" fill="#fff" opacity=".6"><ellipse cx="120" cy="260" rx="10" ry="5" transform="rotate(-25 120 260)"/><ellipse cx="300" cy="170" rx="8" ry="4" transform="rotate(30 300 170)"/><ellipse cx="60" cy="470" rx="9" ry="4.500" transform="rotate(15 60 470)"/><ellipse cx="320" cy="640" rx="10" ry="5" transform="rotate(-20 320 640)"/></g>
+    <path d="M0 650 C80 610 170 625 250 655 S360 690 400 640 V800 H0z" fill="#F7B6D2" opacity=".55"/>
+    <path d="M0 705 C100 675 180 700 270 718 S375 722 400 698 V800 H0z" fill="#CDB6FF" opacity=".6"/>
+    <path d="M0 758 C110 735 210 752 310 762 S385 758 400 750 V800 H0z" fill="#FFC6A6" opacity=".7"/>
+  </svg>
+  <svg class="night" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#150A2C"/><stop offset=".55" stop-color="#2B1458"/><stop offset="1" stop-color="#4B1F63"/></linearGradient>
+      <filter id="nblur" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="30"/></filter>
+      <mask id="ncres"><rect width="400" height="800" fill="#fff"/><circle cx="364" cy="30" r="25" fill="#000"/></mask>
+    </defs>
+    <rect width="400" height="800" fill="url(#nsky)"/>
+    <g filter="url(#nblur)" opacity=".55"><circle class="fl" cx="50" cy="200" r="90" fill="#7A3FA8"/><circle class="fl fl2" cx="350" cy="450" r="110" fill="#B23A6E"/><circle class="fl" cx="90" cy="660" r="100" fill="#4B2C9C"/></g>
+    <circle cx="352" cy="42" r="64" fill="#FFF1B8" opacity=".14" filter="url(#nblur)"/>
+    <circle cx="352" cy="42" r="26" fill="#FFF1B8" mask="url(#ncres)"/>
+    <g fill="#FFF6D9">
+      <circle class="tw" cx="40" cy="70" r="2"/><circle class="tw" cx="130" cy="40" r="1.6"/><circle class="tw" cx="220" cy="110" r="2.2"/>
+      <circle class="tw" cx="70" cy="200" r="1.8"/><circle class="tw" cx="190" cy="270" r="2"/><circle class="tw" cx="350" cy="280" r="1.8"/>
+      <circle class="tw" cx="290" cy="180" r="1.5"/><circle class="tw" cx="28" cy="400" r="2"/><circle class="tw" cx="260" cy="440" r="1.6"/>
+      <circle class="tw" cx="372" cy="520" r="2"/><circle class="tw" cx="150" cy="540" r="1.7"/><circle class="tw" cx="320" cy="360" r="1.5"/>
+    </g>
+    <path d="M0 660 C80 620 170 635 250 665 S360 700 400 650 V800 H0z" fill="#3A1A5E"/>
+    <path d="M0 715 C100 685 180 710 270 726 S375 730 400 708 V800 H0z" fill="#2A1347"/>
+  </svg>
+</div>
+<div class="wrap" id="app"></div>
+<nav class="tabbar"><div class="tabs" role="tablist">
+  <button class="t" role="tab" id="tab-today" aria-selected="true" data-act="tab" data-v="today"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.500A8.500 8.500 0 1 1 9.500 4a7 7 0 0 0 10.500 10.500z"/></svg><span>Today</span></button>
+  <button class="t" role="tab" id="tab-cal" aria-selected="false" data-act="tab" data-v="cal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.500" y="5" width="17" height="15" rx="3.500"/><path d="M8 3v4M16 3v4M3.500 10.500h17"/></svg><span>Calendar</span></button>
+  <button class="plus" data-act="logToday" aria-label="Log today">+</button>
+  <button class="t" role="tab" id="tab-items" aria-selected="false" data-act="tab" data-v="items"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5z"/><path d="M9 8V6.500a3 3 0 0 1 6 0V8"/></svg><span>Kit</span></button>
+  <button class="t" role="tab" id="tab-insights" aria-selected="false" data-act="tab" data-v="insights"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-9M12 20V5M19 20v-12"/></svg><span>Insights</span></button>
+</div></nav>
+<div class="lock" id="lock"><div class="lk"><div class="moon">🌙</div><h2>Kitaran Saya</h2><p id="lockMsg">Enter your PIN</p><div id="dots"></div>
+  <div class="pad"><button data-act="key" data-v="1">1</button><button data-act="key" data-v="2">2</button><button data-act="key" data-v="3">3</button><button data-act="key" data-v="4">4</button><button data-act="key" data-v="5">5</button><button data-act="key" data-v="6">6</button><button data-act="key" data-v="7">7</button><button data-act="key" data-v="8">8</button><button data-act="key" data-v="9">9</button><span></span><button data-act="key" data-v="0">0</button><button data-act="key" data-v="del" aria-label="Delete">⌫</button></div></div></div>
+<div class="scrim" id="scrim" data-act="close"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="sheet-in" id="sheetIn"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+'use strict';
+var KEY='kitaran-saya-v1';
+var state={settings:{name:'',cycle:28,period:5,luteal:14,fertile:true,pin:''},days:{},items:[],closed:'',welcomed:false};
+var tab='today', animNext=true, calY=0, calM=0, editId=null, dayDate='', curFlow=0, curPain=0, curMood=[], curSym=[], curUsed={}, pinBuf='', lockAt=0, openCats={};
+var MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var MON3=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var FLOW=[{v:0,e:'⚪',n:'None',ms:'Tiada'},{v:1,e:'💧',n:'Spotting',ms:'Titik'},{v:2,e:'🩸',n:'Light',ms:'Sedikit'},{v:3,e:'🩸🩸',n:'Medium',ms:'Sederhana'},{v:4,e:'🩸🩸🩸',n:'Heavy',ms:'Banyak'}];
+var PAIN=['😊','🙂','😐','😣','😖','😭'];
+var MOOD=[{k:'happy',e:'😊',n:'Happy'},{k:'calm',e:'😌',n:'Calm'},{k:'energetic',e:'⚡',n:'Energetic'},{k:'tired',e:'😴',n:'Tired'},{k:'anxious',e:'😟',n:'Anxious'},{k:'irritable',e:'😠',n:'Irritable'},{k:'sad',e:'😢',n:'Sad'},{k:'sensitive',e:'🥺',n:'Sensitive'}];
+var SYM=[{k:'cramps',e:'😣',n:'Cramps',ms:'Senggugut'},{k:'headache',e:'🤕',n:'Headache',ms:'Sakit kepala'},{k:'backache',e:'🔙',n:'Backache',ms:'Sakit belakang'},{k:'bloating',e:'🎈',n:'Bloating',ms:'Kembung'},
+ {k:'breast',e:'💗',n:'Breast tenderness',ms:'Payudara sakit'},{k:'nausea',e:'🤢',n:'Nausea',ms:'Loya'},{k:'fatigue',e:'🥱',n:'Fatigue',ms:'Letih'},{k:'acne',e:'🔴',n:'Acne',ms:'Jerawat'},
+ {k:'cravings',e:'🍫',n:'Cravings',ms:'Mengidam'},{k:'diarrhoea',e:'💧',n:'Diarrhoea',ms:'Cirit-birit'},{k:'constipation',e:'😖',n:'Constipation',ms:'Sembelit'},{k:'dizzy',e:'😵',n:'Dizziness',ms:'Pening'},{k:'insomnia',e:'🌙',n:'Poor sleep',ms:'Sukar tidur'}];
+var CATS={prot:['🩸','Protection','Perlindungan'],comf:['💆','Comfort & pain relief','Keselesaan & ubat sakit'],hyg:['🧼','Hygiene','Kebersihan'],food:['🍫','Food & drink','Makanan & minuman'],bag:['👜','Go-bag','Beg bawa']};
+var DEF=[
+ {k:'pad_day',cat:'prot',e:'🌸',n:'Pads (day)',ms:'Tuala wanita (siang)',u:'pcs',need:15,restock:16,on:1},
+ {k:'pad_night',cat:'prot',e:'🌙',n:'Pads (night)',ms:'Tuala wanita (malam)',u:'pcs',need:6,restock:8,on:1},
+ {k:'liner',cat:'prot',e:'🍃',n:'Panty liners',ms:'Pelapik seluar dalam',u:'pcs',need:10,restock:20,on:1},
+ {k:'tampon',cat:'prot',e:'🌷',n:'Tampons',ms:'Tampon',u:'pcs',need:10,restock:16,on:0},
+ {k:'cup',cat:'prot',e:'🥛',n:'Menstrual cup / disc',ms:'Cawan haid',u:'pc',need:1,restock:1,on:0},
+ {k:'uw_period',cat:'prot',e:'🩲',n:'Period underwear',ms:'Seluar dalam haid',u:'pcs',need:2,restock:2,on:0},
+ {k:'heat',cat:'comf',e:'♨️',n:'Hot water bag / heat patch',ms:'Beg air panas / tampalan haba',u:'pc',need:1,restock:1,on:1},
+ {k:'pain',cat:'comf',e:'💊',n:'Pain relief (as advised by your doctor)',ms:'Ubat sakit (ikut nasihat doktor)',u:'box',need:1,restock:1,on:1},
+ {k:'tea',cat:'comf',e:'🍵',n:'Ginger / warm herbal tea',ms:'Teh halia / minuman hangat',u:'box',need:1,restock:1,on:0},
+ {k:'wipes',cat:'hyg',e:'🧻',n:'Wet wipes (unscented)',ms:'Tisu basah tanpa wangian',u:'pack',need:1,restock:2,on:1},
+ {k:'uw',cat:'hyg',e:'👙',n:'Spare underwear',ms:'Seluar dalam ganti',u:'pcs',need:3,restock:3,on:1},
+ {k:'bags',cat:'hyg',e:'🛍️',n:'Disposal bags',ms:'Beg buang',u:'pack',need:1,restock:1,on:1},
+ {k:'soap',cat:'hyg',e:'🧼',n:'Gentle unscented soap',ms:'Sabun lembut tanpa wangian',u:'pc',need:1,restock:1,on:0},
+ {k:'snack',cat:'food',e:'🍫',n:'Healthy snacks (banana, nuts, dark chocolate)',ms:'Snek sihat (pisang, kacang, coklat gelap)',u:'pack',need:1,restock:1,on:1},
+ {k:'iron',cat:'food',e:'🥬',n:'Iron-rich foods (spinach, lean meat, lentils)',ms:'Makanan kaya zat besi (bayam, daging, dhal)',u:'serving',need:1,restock:1,on:0},
+ {k:'water',cat:'food',e:'💧',n:'Water bottle',ms:'Botol air',u:'pc',need:1,restock:1,on:1},
+ {k:'pouch',cat:'bag',e:'👜',n:'Period pouch / go-bag',ms:'Pouch haid',u:'pc',need:1,restock:1,on:1},
+ {k:'bagpad',cat:'bag',e:'📦',n:'Spare pads in your bag',ms:'Tuala wanita dalam beg',u:'pcs',need:3,restock:3,on:1},
+ {k:'clothes',cat:'bag',e:'👗',n:'Spare dark clothes',ms:'Pakaian ganti gelap',u:'set',need:1,restock:1,on:0}];
+var PH={
+ menstrual:{n:'Menstrual',ms:'Haid',c:'#F0527F',tip:'Rest when you can, keep warm and eat iron-rich foods. Gentle walks can ease cramps.',tms:'Berehat, kekal hangat dan makan makanan kaya zat besi. Berjalan perlahan boleh kurangkan senggugut.'},
+ follicular:{n:'Follicular',ms:'Folikular',c:'#9B7BFF',tip:'Energy often rises now. A good time for exercise and new tasks.',tms:'Tenaga biasanya meningkat. Masa sesuai untuk bersenam dan memulakan kerja baru.'},
+ ovulation:{n:'Ovulation window',ms:'Tempoh ovulasi',c:'#2DBFAE',tip:'Mid-cycle. You may notice clearer, stretchy discharge and a little more energy.',tms:'Pertengahan kitaran. Anda mungkin perasan lendir lebih jernih dan elastik serta tenaga lebih.'},
+ luteal:{n:'Luteal',ms:'Luteal',c:'#FFA877',tip:'PMS can show up. Prioritise sleep, gentle movement and balanced meals.',tms:'PMS mungkin muncul. Utamakan tidur, pergerakan ringan dan makanan seimbang.'},
+ late:{n:'Period late',ms:'Haid lewat',c:'#E5484D',tip:'Stress, travel, illness or pregnancy can delay a period. Consider a test if pregnancy is possible, and see a doctor if it is very late.',tms:'Tekanan, perjalanan, sakit atau kehamilan boleh melewatkan haid. Pertimbangkan ujian jika mungkin hamil dan jumpa doktor jika terlalu lewat.'}};
+
+/* ---------- helpers ---------- */
+function $(id){return document.getElementById(id)}
+function p2(n){return String(n).padStart(2,'0')}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function ds(d){return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())}
+function pd(s){var a=s.split('-');return new Date(+a[0],+a[1]-1,+a[2])}
+function todayS(){return ds(new Date())}
+function addD(s,n){var d=pd(s);d.setDate(d.getDate()+n);return ds(d)}
+function diffD(a,b){return Math.round((pd(a)-pd(b))/864e5)}
+function fmt(s){var d=pd(s);return WD[d.getDay()]+', '+d.getDate()+' '+MON3[d.getMonth()]}
+function fmtShort(s){var d=pd(s);return d.getDate()+' '+MON3[d.getMonth()]}
+function fmtFull(s){var d=pd(s);return WD[d.getDay()]+', '+d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear()}
+function num(v){var n=parseFloat(String(v).replace(',','.'));return isFinite(n)&&n>0?n:0}
+function mean(a){return a.reduce(function(x,y){return x+y},0)/a.length}
+function load(){
+  try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);if(d&&typeof d==='object')state=Object.assign(state,d)}}catch(e){}
+  state.settings=Object.assign({name:'',cycle:28,period:5,luteal:14,fertile:true,pin:''},state.settings||{});
+  if(!state.days||typeof state.days!=='object')state.days={};
+  if(!Array.isArray(state.items)||!state.items.length)state.items=DEF.map(function(d){return Object.assign({id:d.k,qty:0,buy:0,custom:0},d)});
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+var toastT;
+function toast(m){var t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},2300)}
+
+/* ---------- cycle maths ---------- */
+function periods(){
+  var days=Object.keys(state.days).filter(function(d){return state.days[d].flow>=2}).sort(), res=[];
+  days.forEach(function(d){var l=res[res.length-1];if(l&&diffD(d,l.e)<=3)l.e=d;else res.push({s:d,e:d})});
+  return res;
+}
+function isOngoing(p){return p&&p.e>=addD(todayS(),-1)&&state.closed!==p.s}
+function cycleLens(P){var a=[];for(var i=1;i<P.length;i++){var x=diffD(P[i].s,P[i-1].s);if(x>=15&&x<=60)a.push(x)}return a}
+function avgCycle(P){var l=cycleLens(P).slice(-6);return l.length?Math.round(mean(l)):state.settings.cycle}
+function avgPeriod(P){
+  var done=P.filter(function(p){return !isOngoing(p)}).slice(-6).map(function(p){return diffD(p.e,p.s)+1}).filter(function(x){return x>=2&&x<=12});
+  return done.length?Math.round(mean(done)):state.settings.period;
+}
+function forecast(){
+  var P=periods(); if(!P.length)return null;
+  var last=P[P.length-1], avg=avgCycle(P), len=avgPeriod(P), lut=state.settings.luteal, today=todayS();
+  var next=addD(last.s,avg), late=0;
+  if(diffD(next,today)<0&&!isOngoing(last)){late=diffD(today,next);next=today}
+  else if(diffD(next,today)<0){next=addD(next,avg)}
+  var starts=[];for(var k=0;k<12;k++)starts.push(addD(next,k*avg));
+  return {P:P,last:last,avg:avg,len:len,lut:lut,late:late,next:next,starts:starts,ongoing:isOngoing(last)};
+}
+function stateFor(fc){
+  var o={pred:{},fert:{},ovu:{}};
+  if(!fc)return o;
+  fc.starts.forEach(function(s,i){
+    for(var j=0;j<fc.len;j++)o.pred[addD(s,j)]=1;
+    if(state.settings.fertile&&!(i===0&&fc.late>0)){
+      var ov=addD(s,-fc.lut);o.ovu[ov]=1;
+      for(var f=-5;f<=1;f++)o.fert[addD(ov,f)]=1;
+    }
+  });
+  return o;
+}
+function phaseNow(fc){
+  if(!fc)return null;
+  var today=todayS(), cd=diffD(today,fc.last.s)+1;
+  if(fc.late>0)return {key:'late',cd:cd};
+  var len=fc.len, ovIdx=fc.avg+1-fc.lut, fs=Math.max(len+1,ovIdx-5), fe=Math.min(fc.avg,ovIdx+1), key;
+  if(fc.ongoing||cd<=len)key='menstrual';
+  else if(cd<fs)key='follicular';
+  else if(cd<=fe)key='ovulation';
+  else key='luteal';
+  return {key:key,cd:cd,len:len,ovIdx:ovIdx,fs:fs,fe:fe};
+}
+
+/* ---------- items ---------- */
+function itemById(id){return state.items.filter(function(i){return i.id===id})[0]}
+function estUse(key){
+  var P=periods().filter(function(p){return !isOngoing(p)}).slice(-3);
+  var tots=P.map(function(p){var s=0;for(var d=p.s;d<=p.e;d=addD(d,1)){var x=state.days[d];if(x&&x.used&&x.used[key])s+=x.used[key]}return s}).filter(function(v){return v>0});
+  return tots.length?mean(tots):0;
+}
+function needOf(it){if(it.cat==='prot'&&it.u==='pcs'){var e=estUse(it.id);if(e>0)return Math.max(it.need,Math.ceil(e))}return it.need}
+function isLow(it){return it.on&&(it.qty<needOf(it)||it.buy)}
+function lowItems(){return state.items.filter(isLow)}
+
+/* ---------- layout ---------- */
+function topbar(title,sub){return '<div class="top"><div class="ttl"><h1>'+title+'</h1><p>'+sub+'</p></div><button class="gear" data-act="settings" aria-label="Settings">⚙️</button></div>'}
+function greet(){var h=new Date().getHours();return h<12?'Good morning':h<18?'Good afternoon':'Good evening'}
+function render(){
+  ['today','cal','items','insights'].forEach(function(v){var b=$('tab-'+v);if(b)b.setAttribute('aria-selected',tab===v)});
+  var a=$('app');
+  a.innerHTML=tab==='today'?renderToday():tab==='cal'?renderCal():tab==='items'?renderItems():renderInsights();
+  if(animNext){a.classList.remove('enter');void a.offsetWidth;a.classList.add('enter');animNext=false}
+}
+
+/* ---------- TODAY ---------- */
+function ringSvg(fc,ph){
+  var R=86,C=2*Math.PI*R,s='<svg viewBox="0 0 220 220" aria-hidden="true"><g transform="rotate(-90 110 110)">';
+  if(!fc){return s+'<circle cx="110" cy="110" r="'+R+'" fill="none" stroke="currentColor" stroke-opacity=".2" stroke-width="20" stroke-dasharray="6 9"/></g></svg>'}
+  var avg=fc.avg,len=Math.min(fc.len,avg),ovIdx=ph.ovIdx,fs=Math.max(len+1,ovIdx-5),fe=Math.min(avg,ovIdx+1);
+  var segs=[[len,'#F0527F'],[Math.max(0,fs-1-len),'#9B7BFF'],[state.settings.fertile?Math.max(0,fe-fs+1):0,'#2DBFAE'],[0,'#FFA877']];
+  var used=segs[0][0]+segs[1][0]+segs[2][0];segs[3][0]=Math.max(0,avg-used);
+  if(!state.settings.fertile){segs[1][0]+=Math.max(0,fe-fs+1);}
+  var off=0;
+  segs.forEach(function(g){var l=g[0]/avg*C;if(l<=0.5)return;var d=Math.max(0.5,l-3);
+    s+='<circle cx="110" cy="110" r="'+R+'" fill="none" stroke="'+g[1]+'" stroke-width="20" stroke-dasharray="'+d.toFixed(2)+' '+(C-d).toFixed(2)+'" stroke-dashoffset="'+(-(off+1.5)).toFixed(2)+'"/>';off+=l});
+  var pos=Math.min(ph.cd,avg)-0.5, ang=pos/avg*2*Math.PI, x=110+R*Math.cos(ang), y=110+R*Math.sin(ang);
+  s+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="13" fill="#fff" stroke="'+PH[ph.key].c+'" stroke-width="5"/>';
+  return s+'</g></svg>';
+}
+function renderToday(){
+  var fc=forecast(), ph=phaseNow(fc), t=todayS(), nm=state.settings.name?', '+esc(state.settings.name):'';
+  var h=topbar(greet()+nm,fmtFull(t));
+  var center,sub='';
+  if(!fc){center='<div class="rl">Welcome</div><div class="rn">Log your<br>first period</div>';}
+  else if(ph.key==='late'){center='<div class="rl">Period is</div><div class="rn" style="color:var(--rose)">'+fc.late+'<small> day'+(fc.late>1?'s':'')+'</small></div><div class="ro">late · cycle day '+ph.cd+'</div>'}
+  else if(fc.ongoing){var pdn=diffD(t,fc.last.s)+1;center='<div class="rl">Period</div><div class="rn">Day '+pdn+'</div><div class="ro">cycle day '+ph.cd+'</div>'}
+  else{var dn=diffD(fc.next,t);center='<div class="rl">Cycle day</div><div class="rn">'+ph.cd+'</div><div class="ro">period in '+dn+' day'+(dn===1?'':'s')+'</div>'}
+  h+='<div class="hero"><div class="ring">'+ringSvg(fc,ph)+'<div class="c">'+center+'</div></div>';
+  if(ph){
+    var P=PH[ph.key];
+    h+='<div class="phase" style="--c:'+P.c+'"><i></i><b>'+(ph.key==='ovulation'&&!state.settings.fertile?'Mid-cycle':P.n)+'</b><span>'+P.ms+'</span></div>'+
+       '<p class="ptip">'+P.tip+'<small>'+P.tms+'</small></p>';
+  }else h+='<p class="ptip">Tap the button below when your period starts, or add your last period in Settings.<small>Tekan butang di bawah apabila haid bermula.</small></p>';
+  h+='<div class="legend"><span><i style="background:#F0527F"></i>Period</span><span><i style="background:#9B7BFF"></i>Follicular</span>'+(state.settings.fertile?'<span><i style="background:#2DBFAE"></i>Fertile</span>':'')+'<span><i style="background:#FFA877"></i>Luteal</span></div></div>';
+  var tl=state.days[t]||{};
+  if(fc&&fc.ongoing){
+    h+='<div class="row2"><button class="btn rose" data-act="logToday">🩸 Log today</button><button class="btn ghost" data-act="endPeriod">Period ended</button></div>';
+  }else h+='<div class="row2"><button class="btn rose" data-act="startPeriod">🩸 Period started</button><button class="btn ghost" data-act="logToday">Log symptoms</button></div>';
+  // kit alert
+  var low=lowItems();
+  if(fc&&low.length){
+    var dn2=diffD(fc.next,t);
+    if(fc.late>0||dn2<=7)h+='<button class="card alertc" data-act="tab" data-v="items"><div class="ai">🛍️</div><div><b>'+(fc.late>0?'Your period is due':'Period expected in '+dn2+' day'+(dn2===1?'':'s'))+'</b><span>'+low.length+' kit item'+(low.length>1?'s':'')+' to buy · '+low.slice(0,3).map(function(i){return esc(i.n.split(' (')[0])}).join(', ')+(low.length>3?'…':'')+'</span></div></button>';
+  }
+  // today's log
+  var bits=[];
+  if(tl.flow)bits.push(FLOW[tl.flow].e+' '+FLOW[tl.flow].n);
+  if(tl.pain)bits.push('Pain '+tl.pain+'/5');
+  (tl.mood||[]).forEach(function(k){var m=MOOD.filter(function(x){return x.k===k})[0];if(m)bits.push(m.e+' '+m.n)});
+  (tl.sym||[]).forEach(function(k){var m=SYM.filter(function(x){return x.k===k})[0];if(m)bits.push(m.e+' '+m.n)});
+  h+='<button class="card" style="width:100%;text-align:left;color:inherit" data-act="logToday"><h3>Today\'s log <span class="muted" style="font-weight:500;font-size:13px">· Catatan hari ini</span></h3>'+
+     (bits.length?'<div class="chips">'+bits.map(function(b){return '<span class="pill">'+b+'</span>'}).join('')+'</div>':'<div class="muted">Nothing logged yet. Tap to add flow, mood and symptoms.</div>')+'</button>';
+  if(fc){
+    var st=stateFor(fc),nextFert=null,nextOvu=null;
+    for(var i=0;i<45;i++){var d=addD(t,i);if(!nextFert&&st.fert[d])nextFert=d;if(!nextOvu&&st.ovu[d])nextOvu=d;}
+    h+='<div class="sec"><h2>Coming up</h2></div><div class="grid3">'+
+      '<div class="mini"><span>🩸</span><b>'+fmtShort(fc.next)+'</b><small>'+(fc.late>0?'Expected now':'Next period')+'</small></div>'+
+      (state.settings.fertile&&nextFert?'<div class="mini"><span>🌿</span><b>'+fmtShort(nextFert)+'</b><small>Fertile window</small></div><div class="mini"><span>🌕</span><b>'+(nextOvu?fmtShort(nextOvu):'-')+'</b><small>Ovulation (est.)</small></div>':
+        '<div class="mini"><span>📏</span><b>'+fc.avg+' days</b><small>Avg cycle</small></div><div class="mini"><span>⏳</span><b>'+fc.len+' days</b><small>Avg period</small></div>')+'</div>';
+    h+='<p class="muted" style="font-size:12.5px;text-align:center;margin:10px 6px">Predictions are estimates from your history. They are not a form of contraception.</p>';
+  }
+  return h;
+}
+
+/* ---------- CALENDAR ---------- */
+function renderCal(){
+  var fc=forecast(), st=stateFor(fc), t=todayS();
+  var first=new Date(calY,calM,1), off=(first.getDay()+6)%7, dim=new Date(calY,calM+1,0).getDate();
+  var h=topbar('Calendar','Kalendar kitaran');
+  h+='<div class="msw"><button data-act="calPrev" aria-label="Previous month">‹</button><button class="mcur" data-act="calToday">'+MON[calM]+' '+calY+'</button><button data-act="calNext" aria-label="Next month">›</button></div>';
+  h+='<div class="card cal"><div class="wd">'+['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(function(d){return '<span>'+d+'</span>'}).join('')+'</div><div class="cg">';
+  for(var i=0,total=Math.ceil((off+dim)/7)*7;i<total;i++){
+    var dn=i-off+1;
+    if(dn<1||dn>dim){h+='<span class="cd blank"></span>';continue}
+    var d=calY+'-'+p2(calM+1)+'-'+p2(dn), x=state.days[d]||{}, cls='cd';
+    if(x.flow>=2)cls+=' pr';else if(x.flow===1)cls+=' sp';
+    else if(st.pred[d]&&d>=t)cls+=' pd';
+    if(st.fert[d])cls+=' fe';
+    if(st.ovu[d])cls+=' ov';
+    if(d===t)cls+=' td';
+    var has=(x.sym&&x.sym.length)||(x.mood&&x.mood.length)||x.pain||x.note;
+    h+='<button class="'+cls+'" data-act="day" data-d="'+d+'"><b>'+dn+'</b>'+(has?'<i></i>':'')+'</button>';
+  }
+  h+='</div></div><div class="legend big"><span><i class="lg pr"></i>Period</span><span><i class="lg pd"></i>Predicted</span>'+(state.settings.fertile?'<span><i class="lg fe"></i>Fertile</span><span><i class="lg ov"></i>Ovulation</span>':'')+'<span><i class="lg td"></i>Today</span></div>';
+  h+='<p class="muted" style="text-align:center;font-size:13px;margin:8px">Tap a day to log flow, mood and symptoms.</p>';
+  return h;
+}
+
+/* ---------- DAY LOG SHEET ---------- */
+function daySheet(date){
+  if(date>todayS()){toast('You can only log up to today');return}
+  dayDate=date;var x=state.days[date]||{};
+  curFlow=x.flow||0;curPain=x.pain||0;curMood=(x.mood||[]).slice();curSym=(x.sym||[]).slice();curUsed=Object.assign({},x.used||{});
+  var prot=state.items.filter(function(i){return i.cat==='prot'&&i.on});
+  var h='<h2>'+fmt(date)+'</h2><p class="help">How are you? · Apa khabar anda?</p>'+
+   '<label class="f">Flow · Aliran</label><div class="flows">'+FLOW.map(function(f){return '<button class="flow" data-act="flow" data-v="'+f.v+'" aria-pressed="'+(curFlow===f.v)+'"><span>'+f.e+'</span>'+f.n+'<small>'+f.ms+'</small></button>'}).join('')+'</div>'+
+   '<label class="f">Pain · Sakit</label><div class="pains">'+PAIN.map(function(e,i){return '<button class="pn" data-act="pain" data-v="'+i+'" aria-pressed="'+(curPain===i)+'"><span>'+e+'</span>'+i+'</button>'}).join('')+'</div>'+
+   '<label class="f">Mood</label><div class="opts">'+MOOD.map(function(m){return '<button type="button" class="opt" data-act="mood" data-k="'+m.k+'" aria-pressed="'+(curMood.indexOf(m.k)>-1)+'">'+m.e+' '+m.n+'</button>'}).join('')+'</div>'+
+   '<label class="f">Symptoms · Simptom</label><div class="opts">'+SYM.map(function(m){return '<button type="button" class="opt" data-act="sym" data-k="'+m.k+'" aria-pressed="'+(curSym.indexOf(m.k)>-1)+'">'+m.e+' '+m.n+'</button>'}).join('')+'</div>';
+  if(prot.length){
+    h+='<label class="f">Products used today · Produk digunakan</label><div class="used">'+prot.map(function(i){
+      return '<div class="ur"><span>'+i.e+' '+esc(i.n)+'</span><div class="step"><button data-act="used" data-k="'+i.id+'" data-d="-1" aria-label="Less">−</button><b id="u_'+i.id+'">'+(curUsed[i.id]||0)+'</b><button data-act="used" data-k="'+i.id+'" data-d="1" aria-label="More">+</button></div></div>'}).join('')+
+      '</div><p class="help" style="margin-top:6px">This counts down your kit stock automatically.</p>';
+  }
+  h+='<label class="f" for="dNote">Notes · Catatan</label><textarea class="inp" id="dNote" placeholder="e.g. cramps after lunch, took a warm shower">'+esc(x.note||'')+'</textarea>'+
+   '<div class="row2"><button class="btn ghost" data-act="close">Cancel</button><button class="btn rose" data-act="saveDay">Save</button></div>'+
+   (state.days[date]?'<div class="row2"><button class="btn danger" data-act="clearDay">Clear this day</button></div>':'');
+  openSheet(h);
+}
+function applyUsed(oldU,newU){
+  var keys={};Object.keys(oldU||{}).forEach(function(k){keys[k]=1});Object.keys(newU||{}).forEach(function(k){keys[k]=1});
+  Object.keys(keys).forEach(function(k){var it=itemById(k);if(!it)return;var dlt=((newU||{})[k]||0)-((oldU||{})[k]||0);it.qty=Math.max(0,it.qty-dlt)});
+}
+
+/* ---------- ITEMS ---------- */
+function stepper(it){return '<div class="step"><button data-act="stk" data-id="'+it.id+'" data-d="-1" aria-label="Less">−</button><b>'+it.qty+'</b><button data-act="stk" data-id="'+it.id+'" data-d="1" aria-label="More">+</button></div>'}
+function renderItems(){
+  var low=lowItems(), fc=forecast();
+  var sub=low.length?low.length+' to buy':'Everything is stocked ✓';
+  var h=topbar('Period kit',sub+' · Barang diperlukan');
+  if(fc){var dn=diffD(fc.next,todayS());h+='<div class="prep"><span>🌙</span><div><b>'+(fc.late>0?'Your period is due':'Next period '+fmtShort(fc.next))+'</b><small>'+(fc.late>0?'Make sure your kit is ready.':'In '+dn+' day'+(dn===1?'':'s')+'. Pack your go-bag 2 to 3 days before.')+'</small></div></div>'}
+  h+='<div class="card"><h3>🛒 Shopping list <span class="muted" style="font-weight:500;font-size:13px">· Senarai beli</span></h3>';
+  if(!low.length)h+='<div class="muted">Nothing to buy right now. Great job!</div>';
+  else low.forEach(function(it){
+    var need=needOf(it);
+    h+='<div class="si"><span class="ie">'+it.e+'</span><span class="sn">'+esc(it.n)+'<small>have '+it.qty+' · need '+need+' '+esc(it.u)+(it.buy?' · on list':'')+'</small></span><button class="btn gold sm" data-act="bought" data-id="'+it.id+'">Bought ✓</button></div>';
+  });
+  h+='</div>';
+  Object.keys(CATS).forEach(function(c){
+    var its=state.items.filter(function(i){return i.cat===c&&i.on});
+    h+='<div class="sec"><h2>'+CATS[c][0]+' '+CATS[c][1]+'</h2></div><div class="card">';
+    if(!its.length)h+='<div class="muted">No items here yet.</div>';
+    its.forEach(function(it){
+      var need=needOf(it),ok=!isLow(it),est=(it.cat==='prot'&&it.u==='pcs')?estUse(it.id):0;
+      h+='<div class="ir"><button class="ib" data-act="editItem" data-id="'+it.id+'"><span class="ie">'+it.e+'</span><span class="sn">'+esc(it.n)+'<small>'+esc(it.ms)+(est?' · you use ~'+Math.round(est)+' per period':'')+'</small></span></button>'+
+        '<div class="ix">'+stepper(it)+'<span class="st '+(ok?'ok':'low')+'">'+(ok?'OK':'Low')+' · '+need+' '+esc(it.u)+'</span></div></div>';
+    });
+    h+='</div>';
+  });
+  var off=state.items.filter(function(i){return !i.on});
+  h+='<div class="sec"><h2>More items</h2><button class="btn ghost sm" data-act="newItem">+ Custom</button></div><div class="card">';
+  if(!off.length)h+='<div class="muted">All suggested items are in your kit.</div>';
+  off.forEach(function(it){h+='<div class="ir"><div class="ib" style="cursor:default"><span class="ie">'+it.e+'</span><span class="sn">'+esc(it.n)+'<small>'+esc(it.ms)+'</small></span></div><button class="btn ghost sm" data-act="enable" data-id="'+it.id+'">Add</button></div>'});
+  h+='</div>';
+  return h;
+}
+function itemSheet(id){
+  var it=id?itemById(id):null;editId=id||null;
+  var h='<h2>'+(it?'Edit item':'New item')+'</h2><p class="help">Set how many you want to keep in stock.</p>'+
+   '<label class="f" for="iName">Name</label><input class="inp" id="iName" maxlength="60" value="'+(it?esc(it.n):'')+'" placeholder="e.g. Heat patches">'+
+   '<div style="display:flex;gap:8px"><div style="flex:1"><label class="f" for="iQty">Have</label><input class="inp" id="iQty" inputmode="numeric" value="'+(it?it.qty:0)+'"></div><div style="flex:1"><label class="f" for="iNeed">Keep at least</label><input class="inp" id="iNeed" inputmode="numeric" value="'+(it?it.need:1)+'"></div></div>'+
+   '<div style="display:flex;gap:8px"><div style="flex:1"><label class="f" for="iRestock">Buy this many</label><input class="inp" id="iRestock" inputmode="numeric" value="'+(it?it.restock:1)+'"></div><div style="flex:1"><label class="f" for="iUnit">Unit</label><input class="inp" id="iUnit" maxlength="10" value="'+(it?esc(it.u):'pcs')+'"></div></div>'+
+   '<label class="chk"><input type="checkbox" id="iBuy"'+(it&&it.buy?' checked':'')+'> Always keep on my shopping list</label>'+
+   '<div class="row2"><button class="btn ghost" data-act="close">Cancel</button><button class="btn rose" data-act="saveItem">Save</button></div>'+
+   (it?'<div class="row2"><button class="btn ghost" data-act="disableItem" data-id="'+it.id+'">Remove from my kit</button>'+(it.custom?'<button class="btn danger" data-act="delItem" data-id="'+it.id+'">Delete</button>':'')+'</div>':'');
+  openSheet(h);
+}
+
+/* ---------- INSIGHTS ---------- */
+function renderInsights(){
+  var P=periods(), lens=cycleLens(P), fc=forecast();
+  var h=topbar('Insights','Fahami kitaran anda');
+  if(!P.length)return h+'<div class="empty">Log at least one period to see your insights. Two or more periods unlock cycle length trends.</div>'+guide();
+  var avg=avgCycle(P), len=avgPeriod(P);
+  h+='<div class="grid3"><div class="mini"><span>📏</span><b>'+avg+'</b><small>Avg cycle (days)</small></div><div class="mini"><span>🩸</span><b>'+len+'</b><small>Avg period (days)</small></div><div class="mini"><span>🗓️</span><b>'+P.length+'</b><small>Periods logged</small></div></div>';
+  if(lens.length){
+    var mn=Math.min.apply(null,lens),mx=Math.max.apply(null,lens),reg=(mx-mn)<=7;
+    h+='<div class="card"><h3>Cycle length <span class="muted" style="font-weight:500;font-size:13px">· last '+Math.min(8,lens.length)+'</span></h3>'+bars(lens.slice(-8),avg)+
+      '<div class="chips" style="margin-top:8px"><span class="pill">Shortest '+mn+'</span><span class="pill">Longest '+mx+'</span><span class="pill '+(reg?'good':'warn')+'">'+(reg?'Fairly regular':'Varies by '+(mx-mn)+' days')+'</span></div></div>';
+  }
+  h+='<div class="sec"><h2>Period history</h2></div>';
+  P.slice().reverse().slice(0,8).forEach(function(p,i,arr){
+    var idx=P.length-1-i, cl=idx>0?diffD(p.s,P[idx-1].s):0, n=diffD(p.e,p.s)+1;
+    h+='<div class="hr"><div class="hd">'+fmtShort(p.s)+' – '+fmtShort(p.e)+'</div><div class="hc"><span class="pill">'+n+' day'+(n>1?'s':'')+'</span>'+(cl>=15&&cl<=60?'<span class="pill">cycle '+cl+'</span>':'')+(isOngoing(p)?'<span class="pill good">ongoing</span>':'')+'</div></div>';
+  });
+  var from=addD(todayS(),-90), sc={},mc={},cnt=0;
+  Object.keys(state.days).forEach(function(d){if(d>=from){var x=state.days[d];cnt++;(x.sym||[]).forEach(function(k){sc[k]=(sc[k]||0)+1});(x.mood||[]).forEach(function(k){mc[k]=(mc[k]||0)+1})}});
+  var sk=Object.keys(sc).sort(function(a,b){return sc[b]-sc[a]}).slice(0,5);
+  if(sk.length){
+    h+='<div class="card"><h3>Top symptoms <span class="muted" style="font-weight:500;font-size:13px">· last 90 days</span></h3>'+sk.map(function(k){var s=SYM.filter(function(x){return x.k===k})[0],w=sc[k]/sc[sk[0]]*100;
+      return '<div class="brow"><span>'+s.e+' '+s.n+'</span><div class="bar"><i style="width:'+w+'%"></i></div><b>'+sc[k]+'</b></div>'}).join('')+'</div>';
+  }
+  return h+guide();
+}
+function bars(a,avg){
+  var W=320,H=130,pl=6,pr=6,pt=14,pb=22,mx=Math.max.apply(null,a.concat([avg]))+4,bw=(W-pl-pr)/a.length;
+  function Y(v){return pt+(1-v/mx)*(H-pt-pb)}
+  var s='<svg class="chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Cycle length chart">';
+  a.forEach(function(v,i){var x=pl+i*bw+bw*.18,w=bw*.64;
+    s+='<rect x="'+x.toFixed(1)+'" y="'+Y(v).toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+(H-pb-Y(v)).toFixed(1)+'" rx="7" fill="'+((v<21||v>35)?'#E5484D':'#9B7BFF')+'"/><text x="'+(x+w/2).toFixed(1)+'" y="'+(Y(v)-4).toFixed(1)+'" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor">'+v+'</text>'});
+  s+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+Y(avg)+'" y2="'+Y(avg)+'" stroke="#F0527F" stroke-width="1.5" stroke-dasharray="5 4"/>';
+  return s+'<text x="'+(W-pr)+'" y="'+(H-6)+'" text-anchor="end" font-size="10" fill="currentColor" opacity=".6">dashed = average '+avg+' days</text></svg>';
+}
+function guide(){
+  return '<div class="sec"><h2>Good to know</h2></div>'+
+  '<div class="card guide"><h3>🌙 The four phases</h3><ul><li><b>Menstrual</b> · your period, the shedding of the womb lining.</li><li><b>Follicular</b> · energy rises as an egg matures.</li><li><b>Ovulation</b> · an egg is released, usually about 14 days before the next period.</li><li><b>Luteal</b> · hormones peak then fall; PMS may appear.</li></ul></div>'+
+  '<div class="card guide"><h3>✅ Usually normal</h3><ul><li>Cycles of 21 to 35 days, varying by a few days.</li><li>Periods lasting 2 to 7 days.</li><li>Mild to moderate cramps in the first days.</li></ul></div>'+
+  '<div class="card guide red"><h3>🏥 See a doctor if</h3><ul><li>Cycles are shorter than 21 or longer than 35 days, or very unpredictable.</li><li>You soak a pad or tampon every hour for several hours, or pass large clots.</li><li>Pain is severe or stops you doing daily activities.</li><li>You miss 3 periods in a row and you are not pregnant.</li><li>You bleed between periods or after sex, or periods last more than 7 days.</li><li>You feel faint, very tired or breathless during periods (possible low iron).</li></ul></div>'+
+  '<p class="muted" style="font-size:12.5px;text-align:center;margin:8px 8px 0">General information only, not medical advice. Predictions are estimates and not a method of contraception.</p>';
+}
+
+/* ---------- sheets ---------- */
+function openSheet(html,keep){var s=$('sheetIn'),top=s.scrollTop;s.innerHTML='<div class="grab"></div>'+html;$('scrim').classList.add('on');$('sheet').classList.add('on');s.scrollTop=keep?top:0}
+function closeSheet(){$('scrim').classList.remove('on');$('sheet').classList.remove('on');editId=null}
+function welcomeSheet(){
+  var st=state.settings;
+  openSheet('<h2>Welcome 🌙</h2><p class="help">Set up your cycle in a minute. Everything stays on your phone only.<br>Semua data disimpan dalam telefon anda sahaja.</p>'+
+   '<label class="f" for="wName">Your name (optional)</label><input class="inp" id="wName" maxlength="20" placeholder="e.g. Anisa">'+
+   '<label class="f" for="wLast">When did your last period start?</label><input class="inp" id="wLast" type="date" max="'+todayS()+'">'+
+   '<div style="display:flex;gap:8px"><div style="flex:1"><label class="f" for="wLen">Period lasts (days)</label><input class="inp" id="wLen" inputmode="numeric" value="'+st.period+'"></div><div style="flex:1"><label class="f" for="wCyc">Cycle length (days)</label><input class="inp" id="wCyc" inputmode="numeric" value="'+st.cycle+'"></div></div>'+
+   '<p class="help" style="margin-top:8px">Not sure? Leave 5 and 28. The app learns from what you log.</p>'+
+   '<div class="row2"><button class="btn ghost" data-act="skipWelcome">Skip</button><button class="btn rose" data-act="saveWelcome">Start</button></div>');
+}
+function settingsSheet(){
+  var st=state.settings;
+  openSheet('<h2>Settings</h2>'+
+   '<label class="f" for="sName">Your name</label><input class="inp" id="sName" maxlength="20" value="'+esc(st.name)+'">'+
+   '<div style="display:flex;gap:8px"><div style="flex:1"><label class="f" for="sCyc">Usual cycle (days)</label><input class="inp" id="sCyc" inputmode="numeric" value="'+st.cycle+'"></div><div style="flex:1"><label class="f" for="sPer">Usual period (days)</label><input class="inp" id="sPer" inputmode="numeric" value="'+st.period+'"></div></div>'+
+   '<label class="f" for="sLut">Luteal phase (days, usually 12 to 14)</label><input class="inp" id="sLut" inputmode="numeric" value="'+st.luteal+'">'+
+   '<label class="chk"><input type="checkbox" id="sFert"'+(st.fertile?' checked':'')+'> Show fertile window and ovulation estimates</label>'+
+   '<div class="row2"><button class="btn ghost" data-act="close">Cancel</button><button class="btn rose" data-act="saveSettings">Save</button></div>'+
+   '<h3 class="sh">🔒 Privacy lock</h3><p class="help">'+(st.pin?'A PIN is on. This hides the app from casual viewing; it is not strong encryption.':'Add a 4-digit PIN to hide the app from casual viewing.')+'</p>'+
+   (st.pin?'<div class="row2"><button class="btn ghost" data-act="lockNow">Lock now</button><button class="btn danger" data-act="clearPin">Remove PIN</button></div>':
+   '<div style="display:flex;gap:8px"><input class="inp" id="pin1" type="password" inputmode="numeric" maxlength="4" placeholder="New PIN"><input class="inp" id="pin2" type="password" inputmode="numeric" maxlength="4" placeholder="Repeat"></div><div class="row2"><button class="btn" data-act="setPin">Set PIN</button></div>')+
+   '<h3 class="sh">Backup</h3><p class="help">Copy this text and keep it in Notes. Paste it back to restore.</p><textarea class="inp" id="bk" spellcheck="false" style="font-family:ui-monospace,monospace;font-size:12px"></textarea>'+
+   '<div class="row2"><button class="btn ghost" data-act="copyBk">Copy backup</button><button class="btn" data-act="restoreBk">Restore</button></div>'+
+   '<div class="row2"><button class="btn danger" data-act="reset">Erase all data</button></div>');
+  $('bk').value=JSON.stringify(state);
+}
+function copyText(txt,ok){
+  function fb(){var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast(ok)}catch(e){toast('Press and hold the text to copy')}document.body.removeChild(ta)}
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(function(){toast(ok)},fb);else fb();
+}
+
+/* ---------- PIN lock ---------- */
+function hashPin(p){var x=5381,s='kts'+p;for(var i=0;i<s.length;i++)x=((x<<5)+x+s.charCodeAt(i))|0;return String(x)}
+function drawPin(msg){
+  var d='';for(var i=0;i<4;i++)d+='<i class="'+(i<pinBuf.length?'f':'')+'"></i>';
+  $('dots').innerHTML=d;$('lockMsg').textContent=msg||'Enter your PIN';
+}
+function showLock(){if(!state.settings.pin)return;pinBuf='';$('lock').classList.add('on');drawPin()}
+function pinKey(v){
+  if(v==='del'){pinBuf=pinBuf.slice(0,-1);drawPin();return}
+  if(pinBuf.length>=4)return;
+  pinBuf+=v;drawPin();
+  if(pinBuf.length===4){
+    if(hashPin(pinBuf)===state.settings.pin){$('lock').classList.remove('on');pinBuf=''}
+    else{setTimeout(function(){pinBuf='';drawPin('Wrong PIN, try again')},250)}
+  }
+}
+
+/* ---------- actions ---------- */
+var acts={
+  tab:function(el){tab=el.dataset.v;animNext=true;render();window.scrollTo(0,0)},
+  close:closeSheet,
+  settings:settingsSheet,
+  logToday:function(){daySheet(todayS())},
+  day:function(el){var d=el.dataset.d;if(d>todayS()){toast('Predicted day. You can log it when it arrives.');return}daySheet(d)},
+  startPeriod:function(){
+    var t=todayS(),x=state.days[t]||{};if(!(x.flow>=2))x.flow=3;state.days[t]=x;state.closed='';save();render();toast('Period started 🩸');
+  },
+  endPeriod:function(){var fc=forecast();if(fc){state.closed=fc.last.s;save();render();toast('Marked as ended')}},
+  calPrev:function(){calM--;if(calM<0){calM=11;calY--}render()},
+  calNext:function(){calM++;if(calM>11){calM=0;calY++}render()},
+  calToday:function(){var n=new Date();calY=n.getFullYear();calM=n.getMonth();render()},
+  flow:function(el){curFlow=+el.dataset.v;document.querySelectorAll('#sheetIn .flow').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.v===curFlow)})},
+  pain:function(el){curPain=+el.dataset.v;document.querySelectorAll('#sheetIn .pn').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.v===curPain)})},
+  mood:function(el){var k=el.dataset.k,i=curMood.indexOf(k);if(i>-1)curMood.splice(i,1);else curMood.push(k);el.setAttribute('aria-pressed',i<0)},
+  sym:function(el){var k=el.dataset.k,i=curSym.indexOf(k);if(i>-1)curSym.splice(i,1);else curSym.push(k);el.setAttribute('aria-pressed',i<0)},
+  used:function(el){var k=el.dataset.k,v=Math.max(0,(curUsed[k]||0)+(+el.dataset.d));if(v)curUsed[k]=v;else delete curUsed[k];$('u_'+k).textContent=v},
+  saveDay:function(){
+    var old=(state.days[dayDate]||{}).used||{},rec={flow:curFlow,pain:curPain,mood:curMood.slice(),sym:curSym.slice(),used:Object.assign({},curUsed),note:$('dNote').value.trim()};
+    applyUsed(old,rec.used);
+    var empty=!rec.flow&&!rec.pain&&!rec.mood.length&&!rec.sym.length&&!Object.keys(rec.used).length&&!rec.note;
+    if(empty)delete state.days[dayDate];else state.days[dayDate]=rec;
+    if(rec.flow>=2)state.closed='';
+    save();closeSheet();render();toast('Saved ✓');
+  },
+  clearDay:function(el){
+    if(el.dataset.sure!=='1'){el.dataset.sure='1';el.textContent='Tap again to clear';return}
+    applyUsed((state.days[dayDate]||{}).used||{},{});delete state.days[dayDate];save();closeSheet();render();toast('Cleared');
+  },
+  stk:function(el){var it=itemById(el.dataset.id);if(!it)return;it.qty=Math.max(0,it.qty+(+el.dataset.d));save();render()},
+  bought:function(el){var it=itemById(el.dataset.id);if(!it)return;it.qty=Math.max(it.qty+Math.max(1,it.restock),needOf(it));it.buy=0;save();render();toast('Stock updated ✓')},
+  enable:function(el){var it=itemById(el.dataset.id);if(it){it.on=1;save();render();toast('Added to your kit')}},
+  editItem:function(el){itemSheet(el.dataset.id)},
+  newItem:function(){itemSheet()},
+  saveItem:function(){
+    var n=$('iName').value.trim();if(!n){toast('Give the item a name');return}
+    var o={n:n,qty:Math.max(0,parseInt($('iQty').value,10)||0),need:Math.max(1,parseInt($('iNeed').value,10)||1),restock:Math.max(1,parseInt($('iRestock').value,10)||1),u:$('iUnit').value.trim()||'pcs',buy:$('iBuy').checked?1:0};
+    if(editId){Object.assign(itemById(editId),o)}
+    else state.items.push(Object.assign({id:uid(),cat:'comf',e:'✨',ms:'',on:1,custom:1},o));
+    save();closeSheet();render();toast('Saved ✓');
+  },
+  disableItem:function(el){var it=itemById(el.dataset.id);if(it){it.on=0;it.buy=0;save();closeSheet();render();toast('Removed from your kit')}},
+  delItem:function(el){
+    if(el.dataset.sure!=='1'){el.dataset.sure='1';el.textContent='Tap again to delete';return}
+    state.items=state.items.filter(function(i){return i.id!==el.dataset.id});save();closeSheet();render();
+  },
+  saveWelcome:function(){
+    var st=state.settings,len=Math.min(12,Math.max(2,parseInt($('wLen').value,10)||5)),cyc=Math.min(60,Math.max(15,parseInt($('wCyc').value,10)||28));
+    st.name=$('wName').value.trim();st.period=len;st.cycle=cyc;
+    var last=$('wLast').value;
+    if(last&&last<=todayS()){for(var i=0;i<len;i++){var d=addD(last,i);if(d<=todayS()&&!state.days[d])state.days[d]={flow:3,pain:0,mood:[],sym:[],used:{},note:''}}}
+    state.welcomed=true;save();closeSheet();calcCal();render();
+  },
+  skipWelcome:function(){state.welcomed=true;save();closeSheet()},
+  saveSettings:function(){
+    var st=state.settings;st.name=$('sName').value.trim();
+    st.cycle=Math.min(60,Math.max(15,parseInt($('sCyc').value,10)||28));st.period=Math.min(12,Math.max(2,parseInt($('sPer').value,10)||5));
+    st.luteal=Math.min(16,Math.max(10,parseInt($('sLut').value,10)||14));st.fertile=$('sFert').checked;
+    save();closeSheet();render();toast('Saved ✓');
+  },
+  setPin:function(){
+    var a=$('pin1').value,b=$('pin2').value;
+    if(!/^\d{4}$/.test(a)){toast('PIN must be 4 digits');return}
+    if(a!==b){toast('PINs do not match');return}
+    state.settings.pin=hashPin(a);save();settingsSheet();toast('PIN set 🔒');
+  },
+  clearPin:function(){state.settings.pin='';save();settingsSheet();toast('PIN removed')},
+  lockNow:function(){closeSheet();showLock()},
+  key:function(el){pinKey(el.dataset.v)},
+  copyBk:function(){var ta=$('bk');ta.select();copyText(ta.value,'Backup copied ✓')},
+  restoreBk:function(){
+    try{var d=JSON.parse($('bk').value);if(!d||typeof d.days!=='object'||!Array.isArray(d.items))throw 0;state=Object.assign({settings:{},days:{},items:[],closed:'',welcomed:true},d);save();load();closeSheet();render();toast('Restored ✓')}
+    catch(e){toast('That backup text is not valid')}
+  },
+  reset:function(el){
+    if(el.dataset.sure!=='1'){el.dataset.sure='1';el.textContent='Tap again to erase everything';return}
+    try{localStorage.removeItem(KEY)}catch(e){}
+    state={settings:{name:'',cycle:28,period:5,luteal:14,fertile:true,pin:''},days:{},items:[],closed:'',welcomed:false};load();save();closeSheet();render();setTimeout(welcomeSheet,300);
+  }
+};
+function calcCal(){var n=new Date();calY=n.getFullYear();calM=n.getMonth()}
+document.addEventListener('click',function(e){var el=e.target.closest('[data-act]');if(!el)return;var f=acts[el.dataset.act];if(f)f(el)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSheet()});
+document.addEventListener('visibilitychange',function(){
+  if(document.hidden)lockAt=Date.now();
+  else if(state.settings.pin&&lockAt&&Date.now()-lockAt>30000)showLock();
+});
+
+load();calcCal();render();
+if(state.settings.pin)showLock();
+else if(!state.welcomed)setTimeout(welcomeSheet,350);
+})();
+
+</script>
+</body>
+</html>
